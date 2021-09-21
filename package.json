@@ -26,19 +26,19 @@
     "postinstall": "ngcc"
   },
   "dependencies": {
-    "@angular/animations": "13.0.0-next.6",
-    "@angular/cdk": "12.2.6",
-    "@angular/common": "13.0.0-next.6",
-    "@angular/compiler": "13.0.0-next.6",
-    "@angular/core": "13.0.0-next.6",
+    "@angular/animations": "10.2.5",
+    "@angular/cdk": "9.2.4",
+    "@angular/common": "10.2.5",
+    "@angular/compiler": "10.2.5",
+    "@angular/core": "10.2.5",
     "@angular/flex-layout": "9.0.0-beta.31",
-    "@angular/forms": "13.0.0-next.6",
-    "@angular/localize": "13.0.0-next.6",
+    "@angular/forms": "10.2.5",
+    "@angular/localize": "10.2.5",
     "@angular/material": "12.2.6",
-    "@angular/platform-browser": "13.0.0-next.6",
-    "@angular/platform-browser-dynamic": "13.0.0-next.6",
-    "@angular/router": "13.0.0-next.6",
-    "@angular/service-worker": "13.0.0-next.6",
+    "@angular/platform-browser": "10.2.5",
+    "@angular/platform-browser-dynamic": "10.2.5",
+    "@angular/router": "10.2.5",
+    "@angular/service-worker": "10.2.5",
     "@ckeditor/ckeditor5-angular": "1.2.3",
     "@ckeditor/ckeditor5-build-classic": "21.0.0",
     "@fortawesome/angular-fontawesome": "0.6.1",
@@ -51,13 +51,13 @@
     "lodash": "4.17.21",
     "rxjs": "6.6.2",
     "tslib": "1.10.0",
-    "zone.js": "0.11.4"
+    "zone.js": "0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.6",
     "@angular/cli": "^12.2.6",
-    "@angular/compiler-cli": "^13.0.0-next.6",
-    "@angular/language-service": "13.0.0-next.6",
+    "@angular/compiler-cli": "^12.2.6",
+    "@angular/language-service": "12.2.6",
     "@biesbjerg/ngx-translate-extract": "2.3.4",
     "@ngx-rocket/scripts": "3.0.3",
     "@types/jasmine": "3.3.13",
@@ -83,7 +83,7 @@
     "stylelint-scss": "3.6.1",
     "ts-node": "8.2.0",
     "tslint": "5.16.0",
-    "typescript": "4.3.5"
+    "typescript": "4.0.8"
   },
   "repository": {
     "type": "git",
