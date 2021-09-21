@@ -54,10 +54,10 @@
     "zone.js": "0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.1002.3",
-    "@angular/cli": "10.2.3",
-    "@angular/compiler-cli": "10.2.5",
-    "@angular/language-service": "10.2.5",
+    "@angular-devkit/build-angular": "~12.2.6",
+    "@angular/cli": "^12.2.6",
+    "@angular/compiler-cli": "^12.2.6",
+    "@angular/language-service": "12.2.6",
     "@biesbjerg/ngx-translate-extract": "2.3.4",
     "@ngx-rocket/scripts": "3.0.3",
     "@types/jasmine": "3.3.13",
