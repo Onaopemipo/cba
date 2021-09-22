@@ -6,7 +6,7 @@
     "types": []
   },
   "angularCompilerOptions": {
-    "enableIvy": true,
+    "enableIvy": false,
     "fullTemplateTypeCheck": false,
     "preserveWhitespaces": true
   },
@@ -17,5 +17,5 @@
   "include": [
     "src/**/*.d.ts",
     "typings.d.ts"
-  ]
+  ],
 }

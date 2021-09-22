@@ -193,7 +193,7 @@ export class RunReportComponent implements OnInit {
           break;
         case 'date':
           const dateFormat = this.settingsService.dateFormat;
-          formattedResponse[newKey] = this.datePipe.transform(value, dateFormat);
+          formattedResponse[newKey] = this.datePipe.transform(value.toString(), dateFormat);
           break;
         case 'none':
           formattedResponse[newKey] = value;

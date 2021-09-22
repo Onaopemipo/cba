@@ -143,6 +143,7 @@ export class BusinessRuleParametersComponent implements OnChanges {
   formatUserResponse(response: any, forHeaders: boolean) {
     const formattedResponse: any = {};
     let newKey: string;
+    var dateValue = new Date();
     for (const [key, value] of Object.entries(response)) {
       const param: ReportParameter = this.paramData
         .find((_entry: any) => _entry.name === key);
@@ -156,7 +157,7 @@ export class BusinessRuleParametersComponent implements OnChanges {
           break;
         case 'date':
           const dateFormat = this.settingsService.dateFormat;
-          formattedResponse[newKey] = this.datePipe.transform(value, dateFormat);
+          formattedResponse[newKey] = this.datePipe.transform(value.toString(), dateFormat);
           break;
         case 'none':
           formattedResponse[newKey] = value;
