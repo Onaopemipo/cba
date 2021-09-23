@@ -19,6 +19,7 @@ import { environment } from '../../../environments/environment';
 import { LoginContext } from './login-context.model';
 import { Credentials } from './credentials.model';
 import { OAuth2Token } from './o-auth2-token.model';
+import { Router } from '@angular/router';
 
 /**
  * Authentication workflow.
@@ -55,7 +56,8 @@ export class AuthenticationService {
    */
   constructor(private http: HttpClient,
               private alertService: AlertService,
-              private authenticationInterceptor: AuthenticationInterceptor) {
+              private authenticationInterceptor: AuthenticationInterceptor,
+              private router: Router,) {
     this.rememberMe = false;
     this.storage = sessionStorage;
     const savedCredentials = JSON.parse(
@@ -87,7 +89,6 @@ export class AuthenticationService {
     this.alertService.alert({ type: 'Authentication Start', message: 'Please wait...' });
     this.rememberMe = loginContext.remember;
     this.storage = this.rememberMe ? localStorage : sessionStorage;
-
     if (environment.oauth.enabled) {
       let httpParams = new HttpParams();
       httpParams = httpParams.set('client_id', 'community-app');
@@ -109,6 +110,8 @@ export class AuthenticationService {
           })
         );
     }
+
+
   }
 
   /**
@@ -159,6 +162,10 @@ export class AuthenticationService {
       });
   }
 
+  reloadNow(){
+    window.location.reload();
+  }
+
   /**
    * Sets the authorization token followed by one of the following:
    *
@@ -187,7 +194,15 @@ export class AuthenticationService {
         this.alertService.alert({ type: 'Authentication Success', message: `${credentials.username} successfully logged in!` });
         delete this.credentials;
       }
+      // this.router.navigateByUrl('/home')
+
+      // // this.reloadNow()
+      // window.location.reload();
     }
+
+    console.log('Got here though')
+    this.router.navigateByUrl('/');
+    // window.location.reload();
   }
 
   /**

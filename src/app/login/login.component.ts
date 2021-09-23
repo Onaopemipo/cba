@@ -56,6 +56,9 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.resetPassword = false;
         this.twoFactorAuthenticationRequired = false;
         this.router.navigate(['/'], { replaceUrl: true });
+        // window.location.reload();
+        // this.reloadNow();
+
       }
     });
   }
@@ -66,5 +69,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.alert$.unsubscribe();
   }
+
+  reloadNow(){
+    window.location.reload();
+  }
+
 
 }
